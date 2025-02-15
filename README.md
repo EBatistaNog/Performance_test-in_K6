@@ -1,33 +1,25 @@
-# Projeto de Teste de Performance com k6
+# Performance Testing Project with k6
 
-Este projeto demonstra como realizar testes de carga com k6, focando em simular diferentes padrões de tráfego para uma API de registro de usuário.
+## Overview
+This project demonstrates how to perform load testing using k6, focusing on simulating different traffic patterns for a user registration API.
 
-## Configuração
+## Configuration
+The tests are configured to fail if more than 1% of the HTTP requests fail or if more than 90% of the requests take longer than 7 seconds to complete.
 
-Os testes são configurados para falhar se mais de 1% das requisições HTTP falharem ou se mais de 90% das requisições demorarem mais de 7 segundos para completar.
+## Running the Test
 
-## Executando o Teste
+### 1. Install k6
+Make sure k6 is installed on your system. If it is not installed, follow the instructions available at [k6.io](https://k6.io) to install it.
 
-Para executar o teste, siga os passos abaixo:
+### 2. Prepare the Script
+Save your test script as `k6_POC.js` on your machine.
 
-1. **Instalação do k6**:
-   - Certifique-se de que o k6 está instalado em seu sistema. Se não estiver, você pode instalá-lo seguindo as instruções disponíveis em [k6.io](https://k6.io/docs/getting-started/installation).
+### 3. Open the Terminal
+Open your terminal and navigate to the directory where `k6_POC.js` is saved.
 
-2. **Preparação do Script**:
-   - Salve o script acima como `k6_POC.js` em sua máquina.
+### 4. Run the Test
+Execute the test with the following command:
 
-3. **Abrir o Terminal**:
-   - Abra o terminal e navegue até o diretório onde o arquivo `k6_POC.js` está salvo.
-
-4. **Executar o Teste**:
-   - Execute o teste com o comando:
-     ```bash
-     k6 run k6_POC.js
-     ```
-
-5. **Dashboard Web do k6**:
-   - Para habilitar o dashboard web do k6 e visualizar os resultados em tempo real, use o comando:
-     ```bash
-     K6_WEB_DASHBOARD=true k6 run k6_POC.js
-     ```
-   - Acesse [http://localhost:5665/](http://localhost:5665/) no seu navegador para ver o dashboard.
+### 5. k6 Web Dashboard
+To enable the k6 web dashboard and view the results in real time, run the command:
+Then, open your browser and navigate to [http://localhost:5665/](http://localhost:5665/) to view the dashboard.
